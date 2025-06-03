@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Explicação Completa XML NF-e (Todas as Tags)</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      font-family: monospace;
+      padding: 20px;
+    }
+    .linha {
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+    code {
+      color: #00ffff;
+      font-size: 15px;
+    }
+    .comentario {
+      color: #f1c40f;
+      margin-left: 10px;
+      font-style: italic;
+      font-size: 15px;
+      border: 1px solid #f1c40f;
+      padding: 5px;
+    }
+    .inicio {
+        color: rgb(21, 255, 0);
+        border: 1px solid rgb(21, 255, 0);
+        padding: 5px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .final {
+        margin-left: 10px;
+        color: rgb(255, 0, 0);
+        border: 1px solid rgb(255, 0, 0);
+        padding: 5px;
+        font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Explicação Completa das Tags do XML da NF-e (Versão 4.00)</h1>
+  <pre>
+<code>&lt;infNFe versao="4.00" Id="..."&gt;</code> <span class="comentario">Identificador e versão do layout da nota fiscal</span><br><br>
+  <code>&lt;ide&gt;</code> <span class="comentario inicio">Inicio da Identificação da NF-e</span><br><br>
+    <code>&lt;cUF&gt;</code><span style="color: white;">41</span><code>&lt;/cUF&gt;</code> <span class="comentario">Código da UF do emitente</span><br><br>
+    <code>&lt;cNF&gt;</code><span style="color: white;">00000026</span><code>&lt;/cNF&gt;</code> <span class="comentario">Código numérico para gerar a chave de acesso</span><br><br>
+    <code>&lt;natOp&gt;</code><span style="color: white;">Devolucao de mercadoria</span><code>&lt;/natOp&gt;</code> <span class="comentario">Natureza da operação</span><br><br>
+    <code>&lt;mod&gt;</code><span style="color: white;">55</span><code>&lt;/mod&gt;</code> <span class="comentario">Modelo do documento fiscal</span><br><br>
+    <code>&lt;serie&gt;</code><span style="color: white;">3</span><code>&lt;/serie&gt;</code> <span class="comentario">Série do documento fiscal</span><br><br>
+    <code>&lt;nNF&gt;</code><span style="color: white;">25</span><code>&lt;/nNF&gt;</code> <span class="comentario">Número do documento fiscal</span><br><br>
+    <code>&lt;dhEmi&gt;</code><span style="color: white;">2025-05-22T11:03:52-03:00</span><code>&lt;/dhEmi&gt;</code> <span class="comentario">Data e hora de emissão</span><br><br>
+    <code>&lt;dhSaiEnt&gt;</code><span style="color: white;">[2025-05-22T11:03:52-03:00]</span><code>&lt;/dhSaiEnt&gt;</code> <span class="comentario">Data e hora de saída ou entrada</span><br><br>
+    <code>&lt;tpNF&gt;</code><span style="color: white;">1</span><code>&lt;/tpNF&gt;</code> <span class="comentario">Tipo da nota (0=entrada, 1=saída)</span><br><br>
+    <code>&lt;idDest&gt;</code><span style="color: white;">2</span><code>&lt;/idDest&gt;</code> <span class="comentario">Identificador do destino da operação</span><br><br>
+    <code>&lt;cMunFG&gt;</code><span style="color: white;">4118501</span><code>&lt;/cMunFG&gt;</code> <span class="comentario">Município de ocorrência do fato gerador</span><br><br>
+    <code>&lt;tpImp&gt;</code><span style="color: white;">1</span><code>&lt;/tpImp&gt;</code> <span class="comentario">Tipo de impressão do DANFE</span><br><br>
+    <code>&lt;tpEmis&gt;</code><span style="color: white;">1</span><code>&lt;/tpEmis&gt;</code> <span class="comentario">Tipo de emissão da NF-e</span><br><br>
+    <code>&lt;cDV&gt;</code><span style="color: white;">9</span><code>&lt;/cDV&gt;</code> <span class="comentario">Dígito verificador da chave de acesso</span><br><br>
+    <code>&lt;tpAmb&gt;</code><span style="color: white;">2</span><code>&lt;/tpAmb&gt;</code> <span class="comentario">Tipo de ambiente (1=produção, 2=homologação)</span><br><br>
+    <code>&lt;finNFe&gt;</code><span style="color: white;">4</span><code>&lt;/finNFe&gt;</code> <span class="comentario">Finalidade da emissão</span><br><br>
+    <code>&lt;indFinal&gt;</code><span style="color: white;">1</span><code>&lt;/indFinal&gt;</code> <span class="comentario">Consumidor final</span><br><br>
+    <code>&lt;indPres&gt;</code><span style="color: white;">1</span><code>&lt;/indPres&gt;</code> <span class="comentario">Indicador de presença do comprador</span><br><br>
+    <code>&lt;procEmi&gt;</code><span style="color: white;">0</span><code>&lt;/procEmi&gt;</code> <span class="comentario">Processo de emissão</span><br><br>
+    <code>&lt;verProc&gt;</code><span style="color: white;">1.00</span><code>&lt;/verProc&gt;</code> <span class="comentario">Versão do processo de emissão</span><br><br>
+  <code>&lt;/ide&gt;<span class="final">Final da Identificação da NF-e</span></code><br><br>
+
+  <code>&lt;emit&gt;</code> <span class="comentario inicio">Inicio dos Dados do emitente</span><br><br>
+    <code>&lt;CNPJ&gt;</code><span style="color: white;">41816068000120</span><code>&lt;/CNPJ&gt;</code> <span class="comentario">CNPJ do emitente</span><br><br>
+    <code>&lt;xNome&gt;</code><span style="color: white;">CHRIS TRATTORIA LTDA</span><code>&lt;/xNome&gt;</code> <span class="comentario">Razão social</span><br><br>
+    <code>&lt;xFant&gt;</code><span style="color: white;">CHRIS TRATTORIA</span><code>&lt;/xFant&gt;</code> <span class="comentario">Nome fantasia</span><br><br>
+    <code>&lt;enderEmit&gt;</code> <span class="comentario">Endereço completo</span><br><br>
+    <code>&lt;IE&gt;</code><span style="color: white;">9102168485</span><code>&lt;/IE&gt;</code> <span class="comentario">Inscrição Estadual</span><br><br>
+    <code>&lt;IEST&gt;</code><span style="color: white;">[ISENTO]</span><code>&lt;/IEST&gt;</code> <span class="comentario">IE do substituto tributário</span><br><br>
+    <code>&lt;IM&gt;</code><span style="color: white;">[IM ALEATÓRIA]</span><code>&lt;/IM&gt;</code> <span class="comentario">Inscrição Municipal</span><br><br>
+    <code>&lt;CNAE&gt;</code><span style="color: white;">[CNAE ALEATÓRIO]</span><code>&lt;/CNAE&gt;</code> <span class="comentario">Código da Atividade Econômica</span><br><br>
+    <code>&lt;CRT&gt;</code><span style="color: white;">1</span><code>&lt;/CRT&gt;</code> <span class="comentario">Código do Regime Tributário</span><br><br>
+  <code>&lt;/emit&gt;</code><span class="final">Final dos Dados do emitente</span><br><br>
+
+  <code>&lt;dest&gt;</code> <span class="comentario inicio">Inicio dos Dados do Destinatário da NF-e</span><br><br>
+    <code>&lt;CNPJ/CPF&gt;</code><span style="color: white;">01756629000129</span><code>&lt;/CNPJ/CPF&gt;</code> <span class="comentario">CNPJ ou CPF do destinatário</span><br><br>
+    <code>&lt;xNome&gt;</code><span style="color: white;">CLIENTE</span><code>&lt;/xNome&gt;</code> <span class="comentario">Nome/Razão Social</span><br><br>
+    <code>&lt;enderDest&gt;</code>Rua guarany 1100<code>&lt;/enderDest&gt;</code><span class="comentario">Endereço do destinatário</span><br><br>
+    <code>&lt;indIEDest&gt;</code><span style="color: white;">1</span><code>&lt;/indIEDest&gt;</code> <span class="comentario">Indicador de IE</span><br><br>
+    <code>&lt;IE&gt;</code><span style="color: white;">0627070690060</span><code>&lt;/IE&gt;</code> <span class="comentario">Inscrição Estadual</span><br><br>
+    <code>&lt;email&gt;</code><span style="color: white;">[email@destinatario.com]</span><code>&lt;/email&gt;</code> <span class="comentario">Email para envio da NF-e</span><br><br>
+  <code>&lt;/dest&gt;<span class="final">Final dos dados do Destinatário da NF-e</span></code><br><br>
+
+  <code>&lt;det nItem="1"&gt;</code><span class="comentario inicio">Inicio do Detalhamento dos produtos/serviços</span><br><br>
+    <code>&lt;prod&gt;<span class="inicio">Inicio dos Dados do Produtos</span></code><br><br>
+      <code>&lt;cProd&gt;</code><span style="color: white;">2647</span><code>&lt;/cProd&gt;</code> <span class="comentario">Código do produto</span><br><br>
+      <code>&lt;xProd&gt;</code><span style="color: white;">COCA-COLA 350ML</span><code>&lt;/xProd&gt;</code> <span class="comentario">Descrição do produto</span><br><br>
+      <code>&lt;NCM&gt;</code><span style="color: white;">22030000</span><code>&lt;/NCM&gt;</code> <span class="comentario">Nomenclatura Comum do Mercosul</span><br><br>
+      <code>&lt;CFOP&gt;</code><span style="color: white;">6411</span><code>&lt;/CFOP&gt;</code> <span class="comentario">Código Fiscal de Operação</span><br><br>
+      <code>&lt;uCom&gt;</code><span style="color: white;">CX</span><code>&lt;/uCom&gt;</code> <span class="comentario">Unidade comercial</span><br><br>
+      <code>&lt;qCom&gt;</code><span style="color: white;">6.00</span><code>&lt;/qCom&gt;</code> <span class="comentario">Quantidade comercial</span><br><br>
+      <code>&lt;vUnCom&gt;</code><span style="color: white;">83.15</span><code>&lt;/vUnCom&gt;</code> <span class="comentario">Valor unitário</span><br><br>
+      <code>&lt;vProd&gt;</code><span style="color: white;">498.90</span><code>&lt;/vProd&gt;</code> <span class="comentario">Valor total do produto</span><br><br>
+    <code>&lt;/prod&gt;<span class="final">Final dos Dados do Produtos</span></code><br>
+    <code>&lt;imposto&gt;<span class="inicio">Inicio dos Dados do Imposto</span></code><br><br>
+      <code>&lt;ICMS&gt;</code><span style="color: white;">[ICMS]</span><code>&lt;/ICMS&gt;</code> <span class="comentario">Imposto ICMS</span><br><br>
+      <code>&lt;IPI&gt;</code><span style="color: white;">[IPI]</span><code>&lt;/IPI&gt;</code> <span class="comentario">Imposto sobre Produtos Industrializados</span><br><br>
+      <code>&lt;PIS&gt;</code><span style="color: white;">[PIS]</span><code>&lt;/PIS&gt;</code> <span class="comentario">Programa de Integração Social</span><br><br>
+      <code>&lt;COFINS&gt;</code><span style="color: white;">[COFINS]</span><code>&lt;/COFINS&gt;</code> <span class="comentario">Contribuição para o Financiamento da Seguridade Social</span><br><br>
+    <code>&lt;/imposto&gt;<span class="final">Final dos Dados do Imposto</span></code><br><br>
+  <code>&lt;/det&gt;<span class="final">Final do Detalhamento dos produtos/serviços</span></code><br><br>
+
+  <code>&lt;total&gt;</code> <span class="inicio">Inicio do Grupo de Total da NF-e(Agrupa os totais de ICMS, ISSQN, retenções etc.)</span><br><br>
+    <code>&lt;ICMSTot&gt;<span class="inicio">Inicio dos Totais da NF-e(Soma valores de ICMS, produtos, NF, etc.)</span></code><br><br>
+      <code>&lt;vBC&gt;</code><span style="color: white;">498.90</span><code>&lt;/vBC&gt;</code> <span class="comentario">Valor da base de cálculo do ICMS</span><br><br>
+      <code>&lt;vICMS&gt;</code><span style="color: white;">114.75</span><code>&lt;/vICMS&gt;</code> <span class="comentario">Valor do ICMS</span><br><br>
+      <code>&lt;vProd&gt;</code><span style="color: white;">498.90</span><code>&lt;/vProd&gt;</code> <span class="comentario">Valor total dos produtos</span><br><br>
+      <code>&lt;vNF&gt;</code><span style="color: white;">551.88</span><code>&lt;/vNF&gt;</code> <span class="comentario">Valor total da NF-e</span><br><br>
+    <code>&lt;/ICMSTot&gt;<span class="final">dos Totais da NF-e</span></code><br><br>
+  <code>&lt;/total&gt; <span class="final">Final do Grupo de Total da NF-e</span></code><br><br>
+
+  <code>&lt;transp&gt;</code> <span class="inicio">Inicio das Informações de transporte</span><br><br>
+    <code>&lt;modFrete&gt;</code><span style="color: white;">0</span><code>&lt;/modFrete&gt;</code> <span class="comentario">Modalidade do frete</span><br><br>
+  <code>&lt;/transp&gt;<span class="final">Final das Informações de transporte</span></code><br><br>
+
+  <code>&lt;cobr&gt;</code> <span class="inicio">Inicio da Tag referente a Cobranças</span><br><br>
+    <code>&lt;fat&gt;</code><span style="color: white;">[Fatura]</span><code>&lt;/fat&gt;</code> <span class="comentario">Fatura</span><br><br>
+    <code>&lt;dup&gt;</code><span style="color: white;">[Duplicata]</span><code>&lt;/dup&gt;</code> <span class="comentario">Duplicata</span><br><br>
+  <code>&lt;/cobr&gt;<span class="final">Final  da Tag referente a Cobranças</span></code><br><br>
+
+  <code>&lt;pag&gt;</code> <span class="inicio">Inicio das Informações de pagamento</span><br><br>
+    <code>&lt;detPag&gt;</code><span style="color: white;">[Pagamento]</span><code>&lt;/detPag&gt;</code> <span class="comentario">Detalhamento do pagamento</span><br><br>
+  <code>&lt;/pag&gt;<span class="final">Final  das Informações de Pagamentos</span></code><br><br>
+  <code>&lt;infAdic&gt;</code> <span class="inicio">Inicio das Informações adicionais</span><br><br>
+    <code>&lt;infCpl&gt;</code><span style="color: white;">BC ICMS-ST RS 624-24 ------ FCP-ST RR 12-48</span><code>&lt;/infCpl&gt;</code> <span class="comentario">Informações complementares</span><br><br>
+  <code>&lt;/infAdic&gt;<span class="final">Final das Informações adicionais</span></code><br><br>
+
+  <code>&lt;infRespTec&gt;</code> <span class="inicio">Inicio das informações sobre o Responsável técnico</span><br><br>
+    <code>&lt;CNPJ&gt;</code><span style="color: white;">33215108000150</span><code>&lt;/CNPJ&gt;</code> <span class="comentario">CNPJ do responsável técnico</span><br><br>
+    <code>&lt;xContato&gt;</code><span style="color: white;">Flavio Cesar de Medeira</span> <code>&lt;/xContato&gt;</code><span class="comentario">Nome do contato</span><br><br>
+    <code>&lt;email&gt;</code><span style="color: white;">flaviomedeira@mogo.com.br</span><code>&lt;/email&gt;</code> <span class="comentario">Email do técnico</span><br><br>
+    <code>&lt;fone&gt;</code><span style="color: white;">4632259196</span><code>&lt;/fone&gt;</code> <span class="comentario">Telefone do técnico</span><br><br>
+  <code>&lt;/infRespTec&gt;<span class="final">Final das Informações sobre o Responsável técnico</span></code><br><br>
+<code>&lt;/infNFe&gt;</code><br><br>
+  </pre>
+</body>
+</html>
